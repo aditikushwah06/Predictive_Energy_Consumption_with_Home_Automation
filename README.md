@@ -1,42 +1,83 @@
-# 🏠 Home Automation with Smart Metering 💡
+# Smart Home Automation with Smart Metering
 
-This project combines **home automation** with **smart energy metering** to create an efficient and intelligent system for monitoring and managing electricity consumption in real time. It enables users to remotely control appliances while visualizing live power data on the cloud.
+![Project Badge](https://img.shields.io/badge/IoT-Home%20Automation-blue.svg)
 
-## 🔧 Technologies Used
+---
 
-- **ESP8266 NodeMCU** – Microcontroller for automation and data transmission  
-- **PZEM-004T V3.0** – Power and energy monitoring sensor  
-- **ThingSpeak** – IoT analytics platform for real-time data visualization  
-- **Relay Module** – For switching home appliances  
-- **LCD Display** – To show real-time power usage locally  
-- **Arduino IDE** – For firmware development  
-- **MIT App Inventor** *(optional)* – Custom mobile app for control (if implemented)  
+## 📌 Project Overview
 
-## ⚙️ Features
+This project presents a low-cost, scalable smart home automation system integrated with real-time energy monitoring using **Arduino UNO**, **ESP8266**, and **PZEM-004T** modules. It allows users to remotely control home appliances and monitor energy usage via a custom-built Android app developed with MIT App Inventor.
 
-- 🔌 **Remote Control** of appliances via Wi-Fi  
-- 📊 **Real-time Monitoring** of voltage, current, power, and energy  
-- ☁️ **Cloud Upload** to ThingSpeak for live graphs and analytics  
-- 🧠 **Power Usage Insights** to help reduce electricity bills  
-- 📱 **Scalable** for integration with mobile apps or voice assistants
+The goal is to enhance comfort, reduce energy consumption, and provide wireless access and visualization of home appliance metrics.
 
-## 🚀 Getting Started
+---
 
-**Hardware Setup:**
+## 🚀 Features
 
+- 🔌 **Smart Appliance Control**: Control up to 2 bulbs and 2 power sockets using a smartphone app via Bluetooth.
+- ⚡ **Energy Monitoring**: Real-time display of voltage, current, and power using the PZEM module and LCD interface.
+- ☁️ **Cloud Integration**: Send energy data to ThingSpeak for logging and graphical analysis.
+- 📱 **Mobile App Interface**: Intuitive UI created using MIT App Inventor for real-time device control.
+- 🌐 **Wireless Communication**: Uses Bluetooth (HC-05) and Wi-Fi (ESP8266 NodeMCU) for connectivity.
 
-Connect PZEM-004T to NodeMCU (TX/RX via software serial).
+---
 
-Connect relay module to control appliance power lines.
+## 🛠️ Hardware Used
 
-Attach LCD display to show real-time values.
+- Arduino UNO
+- ESP8266 NodeMCU (Wi-Fi Module)
+- HC-05 Bluetooth Module
+- PZEM-004T with Current Transformer (CT)
+- 16x2 LCD with I2C
+- 4-Channel Relay Module
+- 5V 2A Power Adapter
+- Electrical Loads (2 bulbs + 2 sockets)
 
-Power the circuit via USB or adapter.
+---
 
-**Software Setup:**
+## 💻 Software Used
 
-Flash code using Arduino IDE (see /code folder).
+- Arduino IDE (for firmware development)
+- MIT App Inventor (for mobile app)
+- ThingSpeak (for cloud data visualization)
+- Turnitin (for plagiarism check)
 
-Add your Wi-Fi credentials and ThingSpeak API key in the sketch.
+---
 
-View real-time values on ThingSpeak dashboard.
+## 📱 Mobile App
+
+Built with **MIT App Inventor**:
+- Drag-and-drop blocks interface
+- Buttons to control each appliance (`A/a`, `B/b` command logic)
+- Connects to HC-05 via BluetoothClient
+
+---
+
+## 🔧 System Architecture
+
+- **Arduino UNO** handles appliance control logic
+- **PZEM Module** collects real-time energy data
+- **ESP8266** sends energy metrics to ThingSpeak
+- **LCD** displays local system status
+- **Mobile App** sends commands via Bluetooth
+
+---
+
+## 📊 Results
+
+- Reliable remote appliance control within 10 meters via Bluetooth
+- Accurate and real-time energy readings displayed on both LCD and ThingSpeak
+- Stable performance under multiple load scenarios
+- Easy scalability for additional appliances
+
+---
+
+## 📈 Future Scope
+
+- Expand appliance control to more devices
+- Include voice assistant support (e.g., Google Assistant)
+- Implement remote alerts via SMS or email
+- Add motion or temperature sensors for automated triggers
+
+---
+
